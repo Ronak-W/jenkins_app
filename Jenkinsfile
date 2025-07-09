@@ -86,10 +86,6 @@ pipeline {
             }
         }
 
-            tools {
-        jdk 'JAVA_JDK' // must match the name exactly
-    }
-
             stage('Check Android Dir') {
         steps {
             dir('android') {
