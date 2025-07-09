@@ -86,10 +86,30 @@ pipeline {
             }
         }
 
+            tools {
+        jdk 'JAVA_JDK' // must match the name exactly
+    }
+
+            stage('Check Android Dir') {
+        steps {
+            dir('android') {
+                bat 'dir'
+            }
+        }
+    }
+
+        stage('Check gradlew.bat') {
+        steps {
+            dir('android') {
+                bat 'if exist gradlew.bat (echo Found gradlew.bat) else (echo gradlew.bat not found)'
+            }
+        }
+    }
+
         stage('Assemble APK') {
             steps {
                 dir('android') {
-                    bat 'gradlew.bat assembleRelease'
+                    bat 'gradlew.bat assembleRelease --info'
                 }
             }
         }
