@@ -60,10 +60,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Android APK build completed successfully.'
+            echo 'Android APK build completed successfully.'
         }
         failure {
-            echo '❌ Android APK build failed.'
+            echo 'Android APK build failed.'
         }
     }
 }
