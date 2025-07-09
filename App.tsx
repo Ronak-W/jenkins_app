@@ -19,6 +19,7 @@ function App() {
         <Text>
           Hellooo 
         </Text>
+        <Text>jjjjj</Text>
       </View>
     </View>
   );
