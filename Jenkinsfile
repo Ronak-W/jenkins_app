@@ -65,12 +65,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git url: 'https://github.com/Ronak-W/jenkins_app.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
